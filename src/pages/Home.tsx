@@ -54,7 +54,7 @@ const Home: React.FC = () => {
     },
     {
       title: 'Electronics',
-      image: '/Electronics.jpg'
+      image: '/Electronics.jpg',
       link: '/products?category=electronics',
     },
   ];
