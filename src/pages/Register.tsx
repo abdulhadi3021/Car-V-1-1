@@ -56,18 +56,18 @@ const Register: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-black flex flex-col justify-center py-12 sm:px-6  lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <Link to="/" className="flex justify-center items-center space-x-2">
           <div className="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center">
-            <span className="text-white font-bold text-xl">M</span>
+            <span className="text-white font-bold text-xl">🏎️</span>
           </div>
-          <span className="text-gray-900 font-bold text-2xl">MCP</span>
+          <span className="text-red-600 font-bold text-2xl tracking-wider">MCP</span>
         </Link>
-        <h2 className="mt-6 text-center text-3xl font-bold text-gray-900">
+        <h2 className="mt-6 text-center text-3xl font-bold text-white">
           Join the MCP Community
         </h2>
-        <p className="mt-2 text-center text-sm text-gray-600">
+        <p className="mt-2 text-center text-sm text-gray-400">
           Already have an account?{' '}
           <Link
             to="/login"
@@ -79,11 +79,11 @@ const Register: React.FC = () => {
       </div>
 
       <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
-        <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
+        <div className="bg-gray-900 py-8 px-4 shadow border border-gray-700 sm:rounded-lg sm:px-10">
           <form className="space-y-6" onSubmit={handleSubmit(onSubmit)}>
             {/* Role Selection */}
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-3">
+              <label className="block text-sm font-medium text-white mb-3">
                 I want to:
               </label>
               <div className="grid grid-cols-2 gap-3">
@@ -94,10 +94,10 @@ const Register: React.FC = () => {
                     value="buyer"
                     className="sr-only"
                   />
-                  <div className="border border-gray-300 rounded-lg p-4 text-center hover:border-gray-400 transition-colors">
-                    <User className="h-8 w-8 mx-auto mb-2 text-gray-600" />
-                    <div className="font-medium text-gray-900">Buy Products</div>
-                    <div className="text-sm text-gray-500">Shop for auto parts</div>
+                  <div className="border border-gray-700 rounded-lg p-4 text-center hover:border-gray-600 transition-colors bg-gray-800">
+                    <User className="h-8 w-8 mx-auto mb-2 text-gray-400" />
+                    <div className="font-medium text-white">Buy Products</div>
+                    <div className="text-sm text-gray-400">Shop for auto parts</div>
                   </div>
                 </label>
                 
@@ -108,10 +108,10 @@ const Register: React.FC = () => {
                     value="seller"
                     className="sr-only"
                   />
-                  <div className="border border-gray-300 rounded-lg p-4 text-center hover:border-gray-400 transition-colors">
-                    <Store className="h-8 w-8 mx-auto mb-2 text-gray-600" />
-                    <div className="font-medium text-gray-900">Sell Products</div>
-                    <div className="text-sm text-gray-500">Start your business</div>
+                  <div className="border border-gray-700 rounded-lg p-4 text-center hover:border-gray-600 transition-colors bg-gray-800">
+                    <Store className="h-8 w-8 mx-auto mb-2 text-gray-400" />
+                    <div className="font-medium text-white">Sell Products</div>
+                    <div className="text-sm text-gray-400">Start your business</div>
                   </div>
                 </label>
               </div>
@@ -122,7 +122,7 @@ const Register: React.FC = () => {
 
             {/* Name */}
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="name" className="block text-sm font-medium text-white">
                 Full Name
               </label>
               <div className="mt-1">
@@ -130,7 +130,7 @@ const Register: React.FC = () => {
                   {...register('name')}
                   type="text"
                   autoComplete="name"
-                  className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:ring-red-500 focus:border-red-500"
+                  className="appearance-none block w-full px-3 py-2 border border-gray-700 rounded-md placeholder-gray-400 bg-gray-800 text-white focus:outline-none focus:ring-red-500 focus:border-red-500"
                   placeholder="Enter your full name"
                 />
                 {errors.name && (
@@ -141,7 +141,7 @@ const Register: React.FC = () => {
 
             {/* Email */}
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="email" className="block text-sm font-medium text-white">
                 Email Address
               </label>
               <div className="mt-1">
@@ -149,7 +149,7 @@ const Register: React.FC = () => {
                   {...register('email')}
                   type="email"
                   autoComplete="email"
-                  className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:ring-red-500 focus:border-red-500"
+                  className="appearance-none block w-full px-3 py-2 border border-gray-700 rounded-md placeholder-gray-400 bg-gray-800 text-white focus:outline-none focus:ring-red-500 focus:border-red-500"
                   placeholder="Enter your email"
                 />
                 {errors.email && (
@@ -160,7 +160,7 @@ const Register: React.FC = () => {
 
             {/* Password */}
             <div>
-              <label htmlFor="password" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="password" className="block text-sm font-medium text-white">
                 Password
               </label>
               <div className="mt-1 relative">
@@ -168,7 +168,7 @@ const Register: React.FC = () => {
                   {...register('password')}
                   type={showPassword ? 'text' : 'password'}
                   autoComplete="new-password"
-                  className="appearance-none block w-full px-3 py-2 pr-10 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:ring-red-500 focus:border-red-500"
+                  className="appearance-none block w-full px-3 py-2 pr-10 border border-gray-700 rounded-md placeholder-gray-400 bg-gray-800 text-white focus:outline-none focus:ring-red-500 focus:border-red-500"
                   placeholder="Enter your password"
                 />
                 <button
@@ -190,7 +190,7 @@ const Register: React.FC = () => {
 
             {/* Confirm Password */}
             <div>
-              <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="confirmPassword" className="block text-sm font-medium text-white">
                 Confirm Password
               </label>
               <div className="mt-1 relative">
@@ -198,7 +198,7 @@ const Register: React.FC = () => {
                   {...register('confirmPassword')}
                   type={showConfirmPassword ? 'text' : 'password'}
                   autoComplete="new-password"
-                  className="appearance-none block w-full px-3 py-2 pr-10 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:ring-red-500 focus:border-red-500"
+                  className="appearance-none block w-full px-3 py-2 pr-10 border border-gray-700 rounded-md placeholder-gray-400 bg-gray-800 text-white focus:outline-none focus:ring-red-500 focus:border-red-500"
                   placeholder="Confirm your password"
                 />
                 <button
@@ -226,7 +226,7 @@ const Register: React.FC = () => {
                   type="checkbox"
                   className="h-4 w-4 text-red-600 focus:ring-red-500 border-gray-300 rounded"
                 />
-                <label htmlFor="termsAccepted" className="ml-2 block text-sm text-gray-900">
+                <label htmlFor="termsAccepted" className="ml-2 block text-sm text-white">
                   I agree to the{' '}
                   <Link to="/terms" className="text-red-600 hover:text-red-500">
                     Terms and Conditions
